@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — X Video Downloader</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #152033;
+        --muted: #5c6b7e;
+        --bg: #f4f6f9;
+        --card: #fff;
+        --line: #d7dee8;
+        --accent: #244878;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font: 16px/1.55 "Segoe UI", "IBM Plex Sans", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(100% 60% at 0% 0%, #d9e4f4 0%, transparent 55%),
+          var(--bg);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+      h1 { margin: 0 0 8px; font-size: 1.75rem; letter-spacing: -0.02em; }
+      h2 { margin: 28px 0 8px; font-size: 1.1rem; }
+      p, li { color: var(--ink); }
+      .muted { color: var(--muted); font-size: 0.92rem; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 20px 22px;
+        margin-top: 20px;
+      }
+      a { color: var(--accent); }
+      ul { padding-left: 1.2rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="muted">X Video Downloader · Last updated: 2026-09-26</p>
+
+      <div class="card">
+        <h2>Summary</h2>
+        <p>
+          X Video Downloader does not collect, sell, or transmit personal data to
+          the developer. There is no account system and no analytics SDK.
+        </p>
+
+        <h2>Data handled locally</h2>
+        <ul>
+          <li>
+            <strong>Quality preference</strong> — stored in Chrome storage on your
+            device so the extension remembers Best / ~720p / ~480p.
+          </li>
+          <li>
+            <strong>Downloaded files</strong> — saved through the Chrome Downloads
+            API to your computer’s downloads folder.
+          </li>
+        </ul>
+
+        <h2>Network requests</h2>
+        <p>When you choose to download a video, the extension may contact:</p>
+        <ul>
+          <li><code>cdn.syndication.twimg.com</code> — public media metadata</li>
+          <li>
+            <code>x.com</code> / <code>api.x.com</code> — optional logged-in GraphQL
+            fallback using cookies already in your browser (<code>auth_token</code>,
+            <code>ct0</code>). These cookies are not uploaded to the developer.
+          </li>
+          <li><code>video.twimg.com</code> — fetch the MP4 file</li>
+          <li>
+            <code>abs.twimg.com</code> — occasionally refresh X client query IDs
+          </li>
+        </ul>
+
+        <h2>Permissions</h2>
+        <p>
+          The extension requests only the permissions needed to show download
+          controls on X, resolve media URLs, remember settings, and save files.
+        </p>
+
+        <h2>Children</h2>
+        <p>This extension is not directed at children under 13.</p>
+
+        <h2>Changes</h2>
+        <p>
+          If this policy changes, the “Last updated” date above will be revised.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For privacy questions, open an issue in the project repository where you
+          obtained the extension, or contact the publisher email shown on the
+          Chrome Web Store listing.
+        </p>
+
+        <p class="muted">
+          Not affiliated with X Corp. Users are responsible for complying with
+          copyright law and X’s Terms of Service.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
