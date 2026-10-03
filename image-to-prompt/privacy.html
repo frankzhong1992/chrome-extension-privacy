@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image to Prompt privacy policy</title>
+    <style>
+      body {
+        margin: 0;
+        background: #fff;
+        color: #1a1d12;
+        font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
+      }
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 28px 0 8px;
+      }
+      p,
+      li {
+        margin: 0;
+      }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 1.2em;
+      }
+      li + li {
+        margin-top: 4px;
+      }
+      .updated {
+        color: #5c574e;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Image to Prompt privacy policy</h1>
+      <p class="updated">Updated October 3, 2026</p>
+
+      <p>
+        Image to Prompt reads a web image only after you right-click it and choose “Generate Prompt”.
+      </p>
+
+      <h2>Stored on this device</h2>
+      <p>
+        Your API keys, selected provider, model names, and prompt language are saved in
+        chrome.storage.local. They remain in this browser. Clear key removes the key for the
+        provider you are viewing. Uninstalling the extension removes the saved settings.
+      </p>
+
+      <h2>Sent to a provider</h2>
+      <p>
+        The selected image and that provider’s API key go directly from this browser to the
+        provider you choose:
+      </p>
+      <ul>
+        <li>OpenAI at api.openai.com</li>
+        <li>Anthropic at api.anthropic.com</li>
+        <li>Google at generativelanguage.googleapis.com</li>
+      </ul>
+      <p>The developer does not receive or store the image or the key. This data is not sold.</p>
+
+      <h2>Cookies</h2>
+      <p>
+        The image is requested without cookies first. Cookies for that image’s site are sent only
+        when the image cannot be read without them. Those cookies are not forwarded to the AI provider.
+      </p>
+
+      <h2>Page access</h2>
+      <p>
+        Broad site access is used to download the image you clicked, including images hosted on
+        another domain. A script runs in the page only after that click, to read blob images and
+        images the download cannot reach. It does not change the page.
+      </p>
+
+      <h2>Contact</h2>
+      <p>Use the developer email shown on the Chrome Web Store listing for this extension.</p>
+    </main>
+  </body>
+</html>
