@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Quote Status Bar</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f5f2;
+        --ink: #1c1c1f;
+        --muted: #5c5c66;
+        --card: #ffffff;
+        --line: #e5e2da;
+        --accent: #b08d57;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font: 16px/1.65 Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, #fff8ea 0%, transparent 40%),
+          linear-gradient(180deg, #faf8f3 0%, var(--bg) 100%);
+        min-height: 100vh;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 24px 80px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 40px 36px;
+        box-shadow: 0 18px 50px rgba(28, 28, 31, 0.06);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+        letter-spacing: -0.03em;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 28px;
+      }
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 1.15rem;
+      }
+      p,
+      li {
+        color: #2a2a30;
+      }
+      ul {
+        padding-left: 1.2em;
+      }
+      a {
+        color: #8a6a35;
+      }
+      code {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 0.92em;
+        background: #f3f0ea;
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+      }
+      .accent {
+        display: inline-block;
+        width: 42px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <div class="accent" aria-hidden="true"></div>
+        <h1>Privacy Policy</h1>
+        <p class="meta">
+          Quote Status Bar Chrome Extension<br />
+          Last updated: October 7, 2026
+        </p>
+
+        <p>
+          This Privacy Policy explains how the Chrome extension
+          <strong>Quote Status Bar</strong> (“the Extension”) handles information.
+          We designed the Extension to show a short inspirational quote in a
+          temporary bottom status bar when you open a webpage.
+        </p>
+
+        <h2>1. Summary</h2>
+        <ul>
+          <li>We do <strong>not</strong> require account registration.</li>
+          <li>We do <strong>not</strong> sell user data.</li>
+          <li>We do <strong>not</strong> collect browsing history, page content, passwords, or personal identifiers for analytics or advertising.</li>
+          <li>Quote text may be stored locally on your device for offline/fallback display.</li>
+          <li>When online, the Extension may request a quote from third-party public APIs.</li>
+        </ul>
+
+        <h2>2. Data stored on your device</h2>
+        <p>
+          The Extension uses Chrome’s local storage API
+          (<code>chrome.storage.local</code>) to keep a small cache of quote
+          text (up to about 50 quotes per supported language). This cache exists
+          only on your device so a quote can still be shown if a network request
+          fails.
+        </p>
+        <p>
+          Cached items typically include the quote text, attribution/author
+          (when available), language code, and a local timestamp. This data is
+          not uploaded to servers controlled by the Extension developer.
+        </p>
+
+        <h2>3. Network requests to third-party quote APIs</h2>
+        <p>
+          Depending on your browser language preference, the Extension may send
+          a request to one of the following public quote services to fetch a
+          random quote:
+        </p>
+        <ul>
+          <li><code>https://v1.hitokoto.cn/</code> (Chinese)</li>
+          <li><code>https://dummyjson.com/</code> (English)</li>
+          <li><code>https://quotes-api-three.vercel.app/</code> (Spanish)</li>
+          <li><code>https://citation.lecog.fr/</code> (French)</li>
+          <li><code>https://meigen.doodlenote.net/</code> (Japanese)</li>
+        </ul>
+        <p>
+          These requests are needed only to retrieve quote content. The Extension
+          does not intentionally send your name, email, browsing history, or the
+          contents of the webpage you are viewing to these services. Like most
+          web requests, the service operator may receive technical information
+          such as your IP address, user agent, and request timing as part of
+          normal network communication. Their handling of that information is
+          governed by their own policies.
+        </p>
+
+        <h2>4. Permissions</h2>
+        <ul>
+          <li>
+            <code>storage</code> — used solely to store and rotate the local
+            quote cache described above.
+          </li>
+          <li>
+            Host permissions for the quote API domains listed above — used solely
+            to fetch quote JSON responses.
+          </li>
+          <li>
+            Content script on web pages — used solely to display and remove the
+            temporary bottom status bar UI. The Extension does not scrape page
+            content, inject ads, or modify site functionality beyond showing the
+            quote bar.
+          </li>
+        </ul>
+
+        <h2>5. Remote code</h2>
+        <p>
+          The Extension does not download or execute remote JavaScript. It only
+          requests quote data in JSON/text form from the APIs listed above.
+        </p>
+
+        <h2>6. Children</h2>
+        <p>
+          The Extension is a general-purpose utility and is not directed at
+          children. It does not knowingly collect personal information from
+          children.
+        </p>
+
+        <h2>7. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy when the Extension’s data practices
+          change. The “Last updated” date at the top of this page will be revised
+          accordingly. Continued use of the Extension after changes means you
+          accept the updated policy.
+        </p>
+
+        <h2>8. Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy or the Extension’s
+          privacy practices, please contact the developer through the support /
+          contact channel listed on the Chrome Web Store listing for
+          <strong>Quote Status Bar</strong>.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Status Bar</title>
+    <style>
+      :root {
+        --ink: #1c1c1f;
+        --muted: #5c5c66;
+        --accent: #8a6a35;
+        --bg: #f6f5f2;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font: 16px/1.5 Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, #fff8ea 0%, transparent 40%),
+          linear-gradient(180deg, #faf8f3 0%, var(--bg) 100%);
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      main {
+        max-width: 560px;
+      }
+      .accent {
+        display: inline-block;
+        width: 42px;
+        height: 3px;
+        background: #b08d57;
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        color: var(--muted);
+      }
+      a {
+        display: inline-block;
+        margin-top: 12px;
+        margin-right: 12px;
+        color: var(--accent);
+        font-weight: 650;
+      }
+      .note {
+        margin-top: 24px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="accent" aria-hidden="true"></div>
+      <h1>Quote Status Bar</h1>
+      <p>
+        Chrome extension that shows a short quote in a temporary bottom status
+        bar when you open a webpage. Language follows your browser (Chinese,
+        English, Spanish, French, Japanese) and auto-hides after about 10
+        seconds.
+      </p>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a id="store" href="#" hidden>Chrome Web Store</a>
+      <p class="note">
+        Quotes are cached locally on your device. When online, the extension may
+        request a quote from public third-party APIs. It does not track browsing
+        history or sell user data.
+      </p>
+    </main>
+    <script>
+      // After publishing, set STORE_URL to your listing URL.
+      const STORE_URL = "";
+      if (STORE_URL) {
+        const a = document.getElementById("store");
+        a.href = STORE_URL;
+        a.hidden = false;
+      }
+    </script>
+  </body>
+</html>
