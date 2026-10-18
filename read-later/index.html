@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read Later</title>
+    <style>
+      :root {
+        --ink: #1c1917;
+        --muted: #57534e;
+        --accent: #9a3412;
+        --bg: #faf7f2;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(80% 60% at 0% 0%, #ffedd5, transparent 55%),
+          var(--bg);
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      main {
+        max-width: 560px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        color: var(--muted);
+      }
+      a {
+        display: inline-block;
+        margin-top: 12px;
+        margin-right: 12px;
+        color: var(--accent);
+        font-weight: 650;
+      }
+      .note {
+        margin-top: 24px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Read Later</h1>
+      <p>
+        Chrome extension that saves your place on a web page so you can return
+        to it later. Mark a page, then reopen it at the same scroll position
+        from your reading list.
+      </p>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a id="store" href="#" hidden>Chrome Web Store</a>
+      <p class="note">
+        Saved pages stay in Chrome’s local storage on this device. Read Later
+        does not run a server, and it does not send your reading list to the
+        developer or to any third party.
+      </p>
+    </main>
+    <script>
+      // After publishing, set STORE_URL to your listing URL.
+      const STORE_URL = "";
+      if (STORE_URL) {
+        const a = document.getElementById("store");
+        a.href = STORE_URL;
+        a.hidden = false;
+      }
+    </script>
+  </body>
+</html>
